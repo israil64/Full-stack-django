@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  tweet Page App | Dajngo
+{% endblock  %}
+
+{% block content %}
+  <h1 class="p-lg-1 m-3 text-center text-capitalize text-bg-danger p-3 rounded-3">This is Tweet Page in Django.</h1>
+
+<a href="{% url 'tweet_list' %}" target="_blank" rel="noopener noreferrer" class='btn  btn-primary p-3'>Go To all Tweets -></a>
+  {% endblock  %}

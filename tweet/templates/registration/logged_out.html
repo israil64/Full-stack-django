@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Logged Page App | Dajngo
+{% endblock  %}
+
+{% block content %}
+  <h1 class="p-lg-1 m-3 text-center text-capitalize text-bg-danger p-3 rounded-3">This is Logged Page .</h1>
+
+<p> You have been logged out.  
+<a href="{% url 'login' %}" target="_blank" rel="noopener noreferrer">login here</a>
+</p>
+  {% endblock  %}

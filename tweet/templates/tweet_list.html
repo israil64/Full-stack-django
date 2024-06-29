@@ -1,0 +1,37 @@
+{% extends "layout.html" %} 
+
+{% block title %}
+ tweet List Page | Dajngo 
+{% endblock %} 
+
+{% block content %}
+
+<h1 class="p-lg-1 m-3 text-center text-capitalize text-bg-danger p-3 rounded-3">Everyone Can Read Tweets.</h1>
+
+<a class="btn btn-primary m-3 text-center" href="{% url 'tweet_create' %}" target="_blank" rel="noopener noreferrer">Create a Tweet</a>
+
+<div class="container row gap-3">
+
+  {% for tweet in tweets %}
+
+  <div class="card" style="width: 18rem">
+    {% if tweet.photo %}
+         <img src="{{ tweet.photo.url }}" class="card-img-top p-2 rounded-2" alt="Tweet Image">
+    {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{ tweet.user.username }}</h5>
+      <p class="card-text">
+        {{ tweet.text}}
+      </p>
+      {% if tweet.user == user %}
+            <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-light" target="_blank">Edit</a>
+            <a href="{% url 'tweet_delete' tweet.id %}"  class="btn btn-danger" target="_blank">Delete</a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+
+{% endblock %}

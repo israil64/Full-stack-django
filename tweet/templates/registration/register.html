@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Register Page  
+{% endblock  %}
+
+{% block content %}
+  <h1 class="p-lg-1 m-3 text-center text-capitalize text-bg-danger p-3 rounded-3">This is Register Form .</h1>
+
+  <form method="post" >
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+
+
+{% endblock  %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  tweet Form Page | Dajngo
+{% endblock  %}
+ 
+{% block content %}
+  <h4 class='m-3 text-center text-capitalize text-bg-danger p-3 rounded-3'>Welcome to The Tweet Page.</h4>
+  
+  <h3 class='m-2 text-center text-capitalize text-bg-success p-3 rounded-1'> 
+    {% if form.instance.pk %} 
+    Edit Tweet {% else %} 
+    Create Tweet
+    {% endif %} 
+  
+    <form  method="post" enctype='multipart/form-data' class="form">
+    {% csrf_token %}
+      {{form.as_p}}
+    <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+  </form>
+    <a href="{% url 'tweet_list' %}"  rel="noopener noreferrer" class="d-inline-flex">Back to Tweets</a>
+</h3>
+
+{% endblock  %}
