@@ -59,7 +59,7 @@ python manage.py migrate
 
 # add this css file go to settings.py and add the following line 👇:
 
-import os          #at the top of settings.py
+import os #at the top of settings.py
 
 'DIRS': ['templates'], OR 'DIRS' :[os.path.join(BASE_DIR, 'YOURPROJECTNAME/templates')]
 
@@ -75,6 +75,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # ADD THIS SCRIPT IN THE HEAD TAG:
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/index.js' %}"></script>
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}"/>
 
                 <!--** WE WANT TO CREATE APPS IN DJANGO  -->
 

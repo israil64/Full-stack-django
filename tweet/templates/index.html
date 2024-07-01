@@ -5,7 +5,12 @@
 {% endblock  %}
 
 {% block content %}
-  <h1 class="p-lg-1 m-3 text-center text-capitalize text-bg-danger p-3 rounded-3">This is Tweet Page in Django.</h1>
 
-<a href="{% url 'tweet_list' %}" target="_blank" rel="noopener noreferrer" class='btn  btn-primary p-3'>Go To all Tweets -></a>
+  <h1 class="styled-header text-center text-capitalize  p-3 rounded-3 mt-4">
+      <span class="d-block p-1">👋 Welcome to the</span>
+      <span class="d-block p-1 fw-bold">Tweet Fast.</span>
+      <span class="d-block p-1 fst-italic">Go and enjoy 👋🥳</span>
+  </h1>
+ 
+  <p class="color" id="color"></p>
   {% endblock  %}

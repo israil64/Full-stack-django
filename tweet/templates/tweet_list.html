@@ -8,15 +8,14 @@
 
 <h1 class="p-lg-1 m-3 text-center text-capitalize text-bg-danger p-3 rounded-3">Everyone Can Read Tweets.</h1>
 
-<a class="btn btn-primary m-3 text-center" href="{% url 'tweet_create' %}" target="_blank" rel="noopener noreferrer">Create a Tweet</a>
+<a class="btn btn-primary m-3 text-center" href="{% url 'tweet_create' %}" target="" rel="noopener noreferrer">Create a Tweet</a>
 
-<div class="container row gap-3">
-
+<div class="container row gap-3 p-3 m-lg-3 mb-lg-5" >
   {% for tweet in tweets %}
 
   <div class="card" style="width: 18rem">
     {% if tweet.photo %}
-         <img src="{{ tweet.photo.url }}" class="card-img-top p-2 rounded-2" alt="Tweet Image">
+        <img src="{{ tweet.photo.url }}" class="card-img-top p-2 rounded-2" alt="Tweet Image">
     {% endif %}
     <div class="card-body">
       <h5 class="card-title">{{ tweet.user.username }}</h5>
@@ -24,8 +23,8 @@
         {{ tweet.text}}
       </p>
       {% if tweet.user == user %}
-            <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-light" target="_blank">Edit</a>
-            <a href="{% url 'tweet_delete' tweet.id %}"  class="btn btn-danger" target="_blank">Delete</a>
+            <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-light" target="">Edit</a>
+            <a href="{% url 'tweet_delete' tweet.id %}"  class="btn btn-danger" target="">Delete</a>
       {% endif %}
     </div>
   </div>
