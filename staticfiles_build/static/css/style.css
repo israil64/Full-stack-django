@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.styled-header {
+    color: white;
+
+}
+
+.styled-header span:first-child {
+    font-size: 2rem;
+    /* Adjust font size for each line if needed */
+}
+
+.styled-header span:nth-child(2) {
+    font-size: 2.5rem;
+}
+
+.styled-header span:last-child {
+    font-size: 2rem;
+}
+
+
+
+@-webkit-keyframes slideInRight {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes slideInRight {
+    0% {
+        -moz-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes slideInRight {
+    0% {
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOutBottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOutBottom {
+    0% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOutBottom {
+    0% {
+        -o-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutBottom {
+    0% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.animate-slide-in-right {
+    -webkit-animation: slideInRight 1s ease-out;
+    -moz-animation: slideInRight 1s ease-out;
+    -o-animation: slideInRight 1s ease-out;
+    animation: slideInRight 1s ease-out;
+}
+
+.animate-slide-in-right.hidden {
+    display: none;
+}
+
+.animate-slide-in-right {
+    text-align: center;
+    color: #d6e9c6;
+    font: 18px bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 75%;
+    top: 60%;
+    background-color: #444444c0;
+    border: 1px solid rgba(255, 255, 255, 0.);
+    border-color: #d6e9c6;
+
+}
+
+.animate-fade-out-bottom {
+    -webkit-animation: fadeOutBottom 1s ease-in;
+    -moz-animation: fadeOutBottom 1s ease-in;
+    -o-animation: fadeOutBottom 1s ease-in;
+    animation: fadeOutBottom 1s ease-in;
+}
+
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-item input,
+    .search-item button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-collapse .form-control {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .navbar-collapse .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/* For larger screens */
+@media (min-width: 576px) {
+    .custom-class {
+        display: block;
+    }
+}
