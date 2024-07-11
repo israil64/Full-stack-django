@@ -1,0 +1,36 @@
+# Ignore virtual environment directories
+venv/
+.venv/
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore log files
+*.log
+
+# Ignore SQLite database file
+*.sqlite3
+
+# Ignore environment configuration files
+.env
+
+# Ignore static files (generated on the fly)
+/staticfiles/
+
+# Ignore media files (user-uploaded content)
+/media/
+
+# Ignore dependencies
+/node_modules/
+/yarn-error.log
+/.npm
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore system files
+Thumbs.db
