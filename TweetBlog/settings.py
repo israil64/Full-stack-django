@@ -15,6 +15,7 @@ import os
 import environ
 
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -34,7 +35,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1','*']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1',]
 
 # Security settings
 CSRF_COOKIE_SECURE = True
@@ -90,7 +91,7 @@ WSGI_APPLICATION = 'TweetBlog.wsgi.application'
 
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('DATABASE_NAME'),
         'USER': env('DATABASE_USER'),
         'PASSWORD': env('DATABASE_PASSWORD'),
@@ -100,6 +101,7 @@ DATABASES = {
 
     }
 }
+
 
 
 # Password validation

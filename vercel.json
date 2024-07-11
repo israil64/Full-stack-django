@@ -6,11 +6,11 @@
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
-        "runtime": "python3.10"
+        "runtime": "python3.9"
       }
     },
     {
-      "src": "build_files.sh",
+      "src": "build.sh",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "staticfiles_build"
@@ -26,13 +26,5 @@
       "src": "/(.*)",
       "dest": "TweetBlog/wsgi.py"
     }
-  ],
-  "env": {
-    "DATABASE_NAME": "blog",
-    "DATABASE_USER": "TweetsBlog",
-    "DATABASE_PASSWORD": "Israil123",
-    "DATABASE_HOST": "127.0.0.1",
-    "DATABASE_PORT": "3306",
-    "SECRET_KEY": "django-insecure-6u%gg-jy+5zj#^-k88365*dzhs%)6=)n9k^3m($=xp7e9x7(*q"
-  }
+  ]
 }
