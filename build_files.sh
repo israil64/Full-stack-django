@@ -8,4 +8,4 @@ pip install -r requirements.txt
 python manage.py migrate 
 
 # Collect static files
-python manage.py collectstatic --noinput || { echo "Failed to collect static files"; exit 1; }
+python manage.py collectstatic --noinput 
